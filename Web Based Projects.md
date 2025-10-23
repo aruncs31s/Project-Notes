@@ -11,7 +11,6 @@ dg-publish: true
 table  file.outlinks AS "Modules" , file.mtime as "Last Modified" 
 from #project and #website
 sort file.mtime desc
-
 ```
 
 ## Query all backlinks using dataview
@@ -19,7 +18,6 @@ sort file.mtime desc
 ```dataview
 TABLE 
 from #website and #project
-
 ```
 
 ## Checkout Latter 
