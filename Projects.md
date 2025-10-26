@@ -1,10 +1,9 @@
 ---
-banner: "01 Projects/Common/banner.jpg"
 id: Projects
-aliases: []
 tags:
   - projects
-cssclasses: 
+cssclasses:
+  - wide-page
 dg-publish: true
 ---
 # 🧭 Projects Dashboard
@@ -12,7 +11,6 @@ dg-publish: true
 Welcome to your central Project Hub — an overview of all projects, tasks, and notes.
 
 ***
-
 ##  Active Projects
 
 ```dataview
