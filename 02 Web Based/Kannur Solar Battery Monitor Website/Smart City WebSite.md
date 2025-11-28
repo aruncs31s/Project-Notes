@@ -9,6 +9,8 @@ cssclasses:
 dg-publish: true
 ---
 # Smart City Website
+
+
 >[!blank|right-small]+ Pages 
 >There are mainly 4 pages , `Home` , `devices`,`info`, and `about`
 >- [[01 Projects/02 Web_Based/Kannur Solar Battery Monitor Website/website/Home Page]]
