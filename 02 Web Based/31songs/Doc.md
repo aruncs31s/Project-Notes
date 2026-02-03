@@ -24,7 +24,7 @@ dg-publish: true
 	- `MUSIC_DIR` (default: `~/Music`)
 - CORS is permissive for development; request headers allowed include `X-Device-ID` and `X-Session-ID`.
 
-## [[Features]]
+## [[FEATURES]]
 - Music Library
 	- Scans audio files and extracts tags (title, artist, album, etc.)
 	- Aggregates Albums and Artists
