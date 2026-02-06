@@ -337,3 +337,74 @@ If you'd like, I can:
 2. Generate a small Postman/Insomnia collection based on this spec.
 
 Which would you prefer? 🔧
+
+
+---
+
+
+Request
+
+```bash
+curl --location --request GET 'localhost:8080/api/devices/types' \
+--header 'Content-Type: text/plain' \
+--header 'Authorization: ••••••' \
+--data '{
+    "name": "My Solar Charger",
+    "device_type_id": 1,
+    "address": "123 Solar Street",
+    "city": "Solar City",
+    "connected_microcontroller_id": 2
+  }'
+```
+
+```go
+{
+    "device_types": [
+        {
+            "id": 1,
+            "name": "esp8266"
+        },
+        {
+            "id": 2,
+            "name": "esp32"
+        },
+        {
+            "id": 3,
+            "name": "volt-current-meter"
+        },
+        {
+            "id": 4,
+            "name": "smart-switch"
+        },
+        {
+            "id": 5,
+            "name": "sensor-node"
+        },
+        {
+            "id": 6,
+            "name": "temperature-sensor"
+        },
+        {
+            "id": 7,
+            "name": "humidity-sensor"
+        },
+        {
+            "id": 8,
+            "name": "motion-detector"
+        },
+        {
+            "id": 9,
+            "name": "relay-module"
+        },
+        {
+            "id": 10,
+            "name": "power-monitor"
+        },
+        {
+            "id": 11,
+            "name": "energy-meter"
+        }
+    ]
+}
+```
+
