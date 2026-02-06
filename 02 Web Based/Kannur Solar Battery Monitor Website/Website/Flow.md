@@ -89,5 +89,3 @@ The flow and algorithm match what you've described!
 
 
 ### CodeGen 
-
-User Should Be able to generate ESP32 Code Just By Giving , the IP address Of the ESP32 Device , IP address , DeviceToken And HostSSID and HostPassowrd 
