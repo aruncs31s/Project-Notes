@@ -86,3 +86,8 @@ The flow and algorithm match what you've described!
 3. **Data Caching**: Implement React Query/SWR for intelligent caching and background refetching.
 4. **Real-time Updates**: Consider WebSocket connections for live data instead of polling.
 5. **Alert Persistence**: Store dismissed alerts in localStorage so they stay dismissed across sessions.
+
+
+### CodeGen 
+
+User Should Be able to generate ESP32 Code Just By Giving , the IP address Of the ESP32 Device , IP address , DeviceToken And HostSSID and HostPassowrd 
