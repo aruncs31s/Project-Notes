@@ -76,3 +76,18 @@ The algorithm you described is implemented in the backend:
 
 The flow and algorithm match what you've described!
 
+
+
+#### Suggests
+
+
+1. **System-wide Stats**: Currently voltage/power stats are from selected device only. Consider fetching readings for all devices for true system averages.
+    
+2. **Error Boundaries**: Add React Error Boundaries for better error handling.
+    
+3. **Data Caching**: Implement React Query/SWR for intelligent caching and background refetching.
+    
+4. **Real-time Updates**: Consider WebSocket connections for live data instead of polling.
+    
+5. **Alert Persistence**: Store dismissed alerts in localStorage so they stay dismissed across sessions.
+
