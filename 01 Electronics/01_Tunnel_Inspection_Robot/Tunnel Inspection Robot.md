@@ -20,6 +20,15 @@ Arduino UNO
 ![[Screenshot_2026-02-08-02-31-59-789_com.openai.chatgpt-edit.jpg]]
 Programming 
 
+|ESP32|ESP32-CAM|
+|---|---|
+|5V|5V|
+|GND|GND|
+|TX (GPIO1)|U0R|
+|RX (GPIO3)|U0T|
+|GND|GPIO0 (only while flashing)|
+
+
 ![[Screenshot_2026-02-08-02-34-48-108_com.openai.chatgpt-edit.jpg]]
 
  ```cpp
@@ -162,3 +171,42 @@ void startCameraServer() {
   }
 }
 ```
+
+### Pins
+
+![[Pasted image 20260208130824.jpg]]
+
+| Sensor | Pins Used | T   |     |
+| ------ | --------- | --- | --- |
+| DHT11  | D5        | DAC |     |
+| MQ6    | D4        | DAC |     |
+| MQ7    | D6        | DAC |     |
+|        |           |     |     |
+|        |           |     |     |
+|        |           |     |     |
+
+
+![[Pasted image 20260208133127.png]]
+
+
+
+|L298N Pin|Function|RF Nano Pin|
+|---|---|---|
+|ENA|Left motor speed (PWM)|D5|
+|IN1|Left motor dir|D6|
+|IN2|Left motor dir|D7|
+|ENB|Right motor speed (PWM)|D9|
+|IN3|Right motor dir|D10|
+|IN4|Right motor dir|D11|
+|GND|Ground|GND|
+|12V|Motor supply|Battery +|
+|5V|Logic (if jumper present)|❌ (don’t power Nano from this)|
+
+```cpp
+// L298N motor driver
+// L298N(IN1, IN2, ENA, IN3, IN4, ENB)
+// Right motor (OUT1): IN1, IN2, ENA
+// Left motor (OUT2): IN3, IN4, ENB 
+L298N motor(4, 5, 6, 7, 8, 9);
+```
+ 
