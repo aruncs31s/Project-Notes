@@ -174,7 +174,7 @@ void startCameraServer() {
 
 ### Pins
 
-![[Pasted image 20260208130824.jpg]]
+![[Flow.jpg]]
 
 | Sensor | Pins Used | T   |     |
 | ------ | --------- | --- | --- |
@@ -186,7 +186,7 @@ void startCameraServer() {
 |        |           |     |     |
 
 
-![[Pasted image 20260208133127.png]]
+![[Flow.png]]
 
 
 
