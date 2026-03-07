@@ -1,4 +1,4 @@
-# API Documentation
+# Backend API Documentation
 
 The ESDC LMS Backend serves a RESTful API heavily utilizing JSON.
 
