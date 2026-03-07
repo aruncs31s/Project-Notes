@@ -1,9 +1,6 @@
 # Backend API Documentation
 
-The ESDC LMS Backend serves a RESTful API heavily utilizing JSON.
-
-## Base URL
-Typically `http://localhost:8080/api`
+>`http://localhost:8080/api`
 
 ## Authentication
 Protected routes require a Bearer token in the `Authorization` header:
@@ -18,6 +15,12 @@ Protected routes require a Bearer token in the `Authorization` header:
 
 ### Authentication
 - `POST /api/register` - Register a new user
+```json
+{
+    "email": "admin@gmail.com",
+    "password": "dhashamulam"
+}
+```
 - `POST /api/login` - Authenticate and receive a JWT
 
 ### Users
