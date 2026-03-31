@@ -19,3 +19,4 @@ dg-publish: true
 - **Refresh token (`refresh_token`)**
     - Long-lived
     - Used to get a **new access token** when the old one expir
+
