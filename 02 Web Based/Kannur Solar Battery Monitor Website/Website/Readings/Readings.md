@@ -22,3 +22,35 @@ GROUP BY buckets
 ORDER BY buckets
 LIMIT 100 ;
 ```
+
+## Progressive Reading
+
+
+```ts
+export interface Reading {
+  id: string;
+  deviceId: string;
+  voltage?: number;
+  current?: number;
+  power?: number;
+  avg_voltage?: number;
+  avg_current?: number;
+  temperature?: number;
+  humidity?: number;
+  timestamp: number;
+}
+
+export interface ReadingAverages {
+  voltage: number;
+  current: number;
+  power: number;
+  avg_voltage: number;
+  avg_current: number;
+}
+
+export interface ProgressiveReadingsResponse {
+  readings: Reading[];
+  averages: ReadingAverages;
+  last_reading_time: string;
+}
+```

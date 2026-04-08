@@ -23,3 +23,5 @@ dg-publish: true
 ## Todo
 
 - [ ] add missing mappings here mapDeviceToSolarDeviceView 
+
+- [[Readings]]
