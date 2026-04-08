@@ -20,3 +20,6 @@ dg-publish: true
     - Long-lived
     - Used to get a **new access token** when the old one expir
 
+## Todo
+
+- [ ] add missing mappings here mapDeviceToSolarDeviceView 
