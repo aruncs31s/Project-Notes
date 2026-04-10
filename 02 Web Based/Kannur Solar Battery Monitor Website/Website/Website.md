@@ -259,3 +259,8 @@ if err := db.Model(&v2).Association("Features").Append(existingFeatures); err !=
 - Response formats: `FeatureResponse` no longer includes [versionID](vscode-file://vscode-app/opt/visual-studio-code/resources/app/out/vs/code/electron-browser/workbench/workbench.html) since it's many-to-many
 
 The application now properly supports sharing features across multiple versions while maintaining data consistency and efficiency.
+
+
+# Date 2026-04-10
+
+ The components now use brand-consistent CSS variables instead of hardcoded Tailwind gray classes.
