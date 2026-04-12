@@ -71,3 +71,19 @@ All ownership transfers are logged in the `ownership_transfer_logs` table. This 
   - Who initiated the transfer.
   - The timestamp of the transfer.
   - Any associated notes.
+
+---
+
+## 5. Technical Details & Security
+The system uses a combination of database ownership records and **Casbin RBAC (Role-Based Access Control)** to enforce these policies.
+
+### Casbin Integration
+When a transfer occurs:
+1. The `service.Transfer` method is called.
+2. It explicitly calls `casbin.RevokeAllDevicePermissions` for the previous owner.
+3. It updates the `device_ownerships` table.
+4. The internal repository logic (or subsequent middleware) ensure that the new owner is granted the `owner` role for that specific device resource (`device:<id>`).
+
+### Visibility Enforcement
+- **Public:** Middleware and Repository queries are modified to include devices where `is_public = true` regardless of ownership, but only for **read-only** operations.
+- **Private:** Resource access is strictly limited to the `OwnerUserID` or users with an `admin` role.
