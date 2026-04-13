@@ -47,3 +47,5 @@ The following API routes are backed by Redis cache through the decorated reposit
 ## Notes
 - Cache is applied at repository layer for deviceRepo, readingRepo, locationRepo, userRepo, and deviceTypesRepo.
 - Read-heavy endpoints listed above are the ones that benefit directly from Redis cache.
+
+
