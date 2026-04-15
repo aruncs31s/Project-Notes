@@ -13,14 +13,13 @@ dg-publish: true
 
 ```tasks
 not done 
-path includes website
+path includes 02 Web Based/Kannur Solar Battery Monitor Website
 LIMIT 10
 ```
 
 1. [x] Can it plot graphs ✅ 2025-05-04
 2. [x] Can my website scraper can be integrated with this? ✅ 2025-05-04
 3. [x] How re' going to store the data? ✅ 2025-05-04
-
 
 
 ## Def

@@ -10,6 +10,10 @@ dg-publish: true
 
 # APIs
 
+
+
+
+
 ## Authentication
 
 
@@ -22,6 +26,5 @@ dg-publish: true
 
 ## Todo
 
-- [ ] add missing mappings here mapDeviceToSolarDeviceView 
 
 - [[Readings]]
