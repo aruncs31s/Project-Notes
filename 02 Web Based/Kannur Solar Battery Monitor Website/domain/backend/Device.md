@@ -15,7 +15,12 @@ Currently there is 3 api for search , which are separated by types i can just ma
 
 The device search is beeing used in searching micro controllers when adding connected device so, implement this new method
 
-
+- [ ] Implement the following method.
 ```go
-
+SearchDevices(
+	ctx context.Context,
+	userID uint,
+	hardwareTypes []string,
+	query string,
+) ([]dto.GenericDropdown, error)
 ```

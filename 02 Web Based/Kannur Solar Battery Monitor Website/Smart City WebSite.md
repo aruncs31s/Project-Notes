@@ -9,6 +9,12 @@ dg-publish: true
 ---
 # Smart City Website
 
+```dataview
+TABLE dg-publish as  Public , status as Status
+ from #kannur_solar_battery_monitor_website 
+```
+
+
 ## Tasks 
 
 ```tasks
