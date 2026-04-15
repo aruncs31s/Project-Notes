@@ -51,29 +51,29 @@ func (s *deviceService) CreateDevice(
     ctx context.Context,
     userID uint,
     req *dto.CreateDeviceRequest,
-) (dto.DeviceView, error) {
+) (dto.DeviceWithType, error) {
     // ✓ Opens TX here
     tx := database.DB.WithContext(ctx).Begin()
     if tx.Error != nil {
-        return dto.DeviceView{}, fmt.Errorf("failed to begin transaction: %w", tx.Error)
+        return dto.DeviceWithType{}, fmt.Errorf("failed to begin transaction: %w", tx.Error)
     }
 
     // Pass TX to writer
     newD, err := s.writer.CreateDevice(ctx, tx, userID, req)
     if err != nil {
         tx.Rollback()
-        return dto.DeviceView{}, err
+        return dto.DeviceWithType{}, err
     }
 
     // Pass TX to ownership service
     if err := s.ownership.InitDeviceOwnership(ctx, tx, newD.ID, userID); err != nil {
         tx.Rollback()
-        return dto.DeviceView{}, err
+        return dto.DeviceWithType{}, err
     }
 
     // ✓ Commits TX here (both device and ownership updates)
     if err := tx.Commit().Error; err != nil {
-        return dto.DeviceView{}, err
+        return dto.DeviceWithType{}, err
     }
 
     return newD, nil
@@ -87,13 +87,13 @@ func (w *DeviceWriter) CreateDevice(
     tx *gorm.DB,
     userID uint,
     req *dto.CreateDeviceRequest,
-) (dto.DeviceView, error) {
+) (dto.DeviceWithType, error) {
     // ... validation code ...
 
     newDevice, err := w.repo.CreateDevice(ctx, tx, device, details, assignment)
     if err != nil {
         logger.GetLogger().Error("error creating device", ...)
-        return dto.DeviceView{}, err
+        return dto.DeviceWithType{}, err
     }
 
     // ✗ BUG: Log called WITHOUT tx parameter
@@ -101,7 +101,7 @@ func (w *DeviceWriter) CreateDevice(
         logger.GetLogger().Error("error logging device state history after creating device", ...)
     }
 
-    return w.mapDeviceToDeviceView(*device), nil
+    return w.mapDeviceToDeviceWithType(*device), nil
 }
 ```
 
