@@ -8,7 +8,12 @@ tags:
 dg-publish: true
 ---
 # Smart City Website
+12.4 -> 13.5 Duraing
 
+During 9 AM to 6 PM they charge from 12.4 and stops charging at 13.5 , then discharges to 
+
+- Discharge happens at same rate after 6PM and 
+- Charging is slow when time is 7 pm it starts charging at 7 AM but very slowly and it becomes fast when time is 9 AM
 ```dataview
 TABLE dg-publish as  Public , status as Status
  from #kannur_solar_battery_monitor_website 
