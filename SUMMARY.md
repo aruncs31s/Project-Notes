@@ -6,7 +6,7 @@ This document summarizes the comprehensive structure and documentation added to 
 
 ### Core Documentation Files
 
-1. **[README.md](README.md)** - Main repository overview
+1. **[README.md](01%20Projects/README.md)** - Main repository overview
    - Project categories explanation
    - Getting started guide
    - Tagging conventions
@@ -198,7 +198,7 @@ Project-Notes/
 
 ### For Learning
 
-1. Start with [README.md](README.md)
+1. Start with [README.md](01%20Projects/README.md)
 2. Review [examples/](examples/) for practical guidance
 3. Check existing projects for inspiration
 4. Use [QUICK-START.md](QUICK-START.md) as reference
@@ -275,7 +275,7 @@ dg-publish: true
 ## 🎓 Learning Path
 
 ### Beginner
-1. Start with [README.md](README.md) - understand the repository
+1. Start with [README.md](01%20Projects/README.md) - understand the repository
 2. Use [QUICK-START.md](QUICK-START.md) - create your first project
 3. Copy a template - don't start from scratch
 4. Keep it simple - fill in basic sections first
@@ -377,7 +377,7 @@ A well-structured project should have:
 ## 📚 Additional Resources
 
 ### Internal Documentation
-- [README.md](README.md) - Repository overview
+- [README.md](01%20Projects/README.md) - Repository overview
 - [STRUCTURE.md](STRUCTURE.md) - Detailed guidelines
 - [CONTRIBUTING.md](CONTRIBUTING.md) - How to contribute
 - [QUICK-START.md](QUICK-START.md) - Fast start guide

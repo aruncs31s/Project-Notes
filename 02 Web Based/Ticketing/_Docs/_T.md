@@ -204,7 +204,7 @@ The application now uses the following middleware in order:
 - **[DEPLOYMENT_CHECKLIST.md](DEPLOYMENT_CHECKLIST.md)** - Production deployment checklist
 
 ### Original Documentation
-- **[README.md](README.md)** - Main project documentation
+- **[README.md](98%20Private/README.md)** - Main project documentation
 - **[AUTH_README.md](docs/AUTH_README.md)** - Authentication guide
 
 ## Testing
@@ -297,7 +297,7 @@ Consider using Redis for:
 ## Support & Resources
 
 ### Documentation
-- Main: [README.md](README.md)
+- Main: [README.md](98%20Private/README.md)
 - Security: [docs/SECURITY_MONITORING.md](docs/SECURITY_MONITORING.md)
 - Quick Start: [docs/QUICK_START_SECURITY.md](docs/QUICK_START_SECURITY.md)
 - Deployment: [DEPLOYMENT_CHECKLIST.md](DEPLOYMENT_CHECKLIST.md)
