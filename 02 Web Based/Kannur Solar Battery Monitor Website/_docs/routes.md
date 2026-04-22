@@ -1,114 +1,114 @@
 # API Routes
 
-All API endpoints are prefixed with `/api`.
+> All API endpoints are prefixed with `/api`.
 
 ---
 
 ## Authentication
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/login` | User login |
-| POST | `/register` | User registration |
-| POST | `/refresh` | Refresh JWT token |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/login` | POST | User login |
+| `/register` | POST | User registration |
+| `/refresh` | POST | Refresh JWT token |
 
 ---
 
 ## Users
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/users` | List all users |
-| GET | `/users/:id` | Get user by ID |
-| GET | `/users/:id/profile` | Get user profile |
-| GET | `/profile` | Get current user profile |
-| POST | `/users` | Create user |
-| PUT | `/users/:id` | Update user |
-| DELETE | `/users/:id` | Delete user |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/users` | GET | List all users |
+| `/users/:id` | GET | Get user by ID |
+| `/users/:id/profile` | GET | Get user profile |
+| `/profile` | GET | Get current user profile |
+| `/users` | POST | Create user |
+| `/users/:id` | PUT | Update user |
+| `/users/:id` | DELETE | Delete user |
 
 ---
 
 ## Devices
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/devices` | List all devices |
-| GET | `/devices/recent` | List recent devices |
-| GET | `/devices/:id` | Get device by ID |
-| GET | `/devices/my` | Get my devices |
-| GET | `/devices/my/stats` | Get my device stats |
-| GET | `/devices/search` | Search devices |
-| GET | `/devices/types` | List device types |
-| GET | `/devices/types/hardware` | List hardware types |
-| GET | `/devices/types/sensors` | List sensor types |
-| GET | `/devices/states` | List device states |
-| GET | `/devices/states/:id` | Get device state |
-| POST | `/devices` | Create device |
-| POST | `/devices/types` | Create device type |
-| POST | `/devices/:id/control` | Control device |
-| PUT | `/devices/:id` | Update device |
-| PUT | `/devices/:id/full` | Full update device |
-| PUT | `/devices/states/:id` | Update device state |
-| DELETE | `/devices/:id` | Delete device |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/devices` | GET | List all devices |
+| `/devices/recent` | GET | List recent devices |
+| `/devices/:id` | GET | Get device by ID |
+| `/devices/my` | GET | Get my devices |
+| `/devices/my/stats` | GET | Get my device stats |
+| `/devices/search` | GET | Search devices |
+| `/devices/types` | GET | List device types |
+| `/devices/types/hardware` | GET | List hardware types |
+| `/devices/types/sensors` | GET | List sensor types |
+| `/devices/states` | GET | List device states |
+| `/devices/states/:id` | GET | Get device state |
+| `/devices` | POST | Create device |
+| `/devices/types` | POST | Create device type |
+| `/devices/:id/control` | POST | Control device |
+| `/devices/:id` | PUT | Update device |
+| `/devices/:id/full` | PUT | Full update device |
+| `/devices/states/:id` | PUT | Update device state |
+| `/devices/:id` | DELETE | Delete device |
 
 ---
 
 ## Device Types
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/device-types` | List device types |
-| GET | `/devices/:id/type` | Get device type by device ID |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/device-types` | GET | List device types |
+| `/devices/:id/type` | GET | Get device type by device ID |
 
 ---
 
 ## Sensors
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/sensors` | List all sensors |
-| GET | `/sensors/:id` | Get sensor by ID |
-| GET | `/sensors/:id/connected` | Get sensor's connected devices |
-| GET | `/sensors/search` | Search sensors |
-| POST | `/sensors` | Create sensor |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/sensors` | GET | List all sensors |
+| `/sensors/:id` | GET | Get sensor by ID |
+| `/sensors/:id/connected` | GET | Get sensor's connected devices |
+| `/sensors/search` | GET | Search sensors |
+| `/sensors` | POST | Create sensor |
 
 ---
 
 ## Solar Devices
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/solar` | List all solar devices |
-| GET | `/solar/my` | Get my solar devices |
-| GET | `/solar/count` | Get solar device count |
-| GET | `/solar/offline` | Get offline solar devices |
-| POST | `/solar` | Create solar device |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/solar` | GET | List all solar devices |
+| `/solar/my` | GET | Get my solar devices |
+| `/solar/count` | GET | Get solar device count |
+| `/solar/offline` | GET | Get offline solar devices |
+| `/solar` | POST | Create solar device |
 
 ---
 
 ## Microcontrollers
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/devices/microcontrollers` | List microcontroller devices |
-| GET | `/devices/microcontrollers/stats` | Get microcontroller stats |
-| GET | `/devices/microcontrollers/my` | Get my microcontrollers |
-| GET | `/devices/microcontrollers/my/stats` | Get my microcontroller stats |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/devices/microcontrollers` | GET | List microcontroller devices |
+| `/devices/microcontrollers/stats` | GET | Get microcontroller stats |
+| `/devices/microcontrollers/my` | GET | Get my microcontrollers |
+| `/devices/microcontrollers/my/stats` | GET | Get my microcontroller stats |
 
 ---
 
 ## Readings
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/devices/:id/readings` | List readings for device |
-| GET | `/devices/:id/readings/range` | Get readings by date range |
-| GET | `/devices/:id/readings/interval` | Get readings with interval |
-| GET | `/devices/:id/readings/progressive` | Get progressive readings |
-| GET | `/devices/:id/connected/:cid/readings` | Get readings of connected device |
-| GET | `/readings` | Advanced readings (with filters) |
-| GET | `/locations/:id/readings/seven` | 7-day readings for location |
-| POST | `/readings` | Create reading (device auth) |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/devices/:id/readings` | GET | List readings for device |
+| `/devices/:id/readings/range` | GET | Get readings by date range |
+| `/devices/:id/readings/interval` | GET | Get readings with interval |
+| `/devices/:id/readings/progressive` | GET | Get progressive readings |
+| `/devices/:id/connected/:cid/readings` | GET | Get readings of connected device |
+| `/readings` | GET | Advanced readings (with filters) |
+| `/locations/:id/readings/seven` | GET | 7-day readings for location |
+| `/readings` | POST | Create reading (device auth) |
 
 ### Query Parameters for `/readings`
 
@@ -132,110 +132,110 @@ All API endpoints are prefixed with `/api`.
 
 ## Locations
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/locations` | List all locations |
-| GET | `/locations/:id` | Get location by ID |
-| GET | `/locations/search` | Search locations |
-| GET | `/locations/:id/devices` | List devices in location |
-| POST | `/locations` | Create location |
-| PUT | `/locations/:id` | Update location |
-| DELETE | `/locations/:id` | Delete location |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/locations` | GET | List all locations |
+| `/locations/:id` | GET | Get location by ID |
+| `/locations/search` | GET | Search locations |
+| `/locations/:id/devices` | GET | List devices in location |
+| `/locations` | POST | Create location |
+| `/locations/:id` | PUT | Update location |
+| `/locations/:id` | DELETE | Delete location |
 
 ---
 
 ## Device Tokens
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/tokens` | Get my tokens |
-| GET | `/devices/:id/tokens` | Get device tokens |
-| POST | `/device-auth/token` | Generate device token |
-| POST | `/devices/:id/token` | Generate token for device |
-| DELETE | `/tokens/:token_id` | Revoke token |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/tokens` | GET | Get my tokens |
+| `/devices/:id/tokens` | GET | Get device tokens |
+| `/device-auth/token` | POST | Generate device token |
+| `/devices/:id/token` | POST | Generate token for device |
+| `/tokens/:token_id` | DELETE | Revoke token |
 
 ---
 
 ## Ownership
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/devices/:id/ownership` | Get device ownership |
-| POST | `/devices/:id/transfer` | Transfer ownership |
-| GET | `/devices/:id/transfer-history` | Get transfer history |
-| PUT | `/devices/:id/public` | Set device public |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/devices/:id/ownership` | GET | Get device ownership |
+| `/devices/:id/transfer` | POST | Transfer ownership |
+| `/devices/:id/transfer-history` | GET | Get transfer history |
+| `/devices/:id/public` | PUT | Set device public |
 
 ---
 
 ## Notifications
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/notifications` | Get notifications |
-| PUT | `/notifications/read-all` | Mark all as read |
-| PUT | `/notifications/:id/read` | Mark as read |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/notifications` | GET | Get notifications |
+| `/notifications/read-all` | PUT | Mark all as read |
+| `/notifications/:id/read` | PUT | Mark as read |
 
 ---
 
 ## Device State History
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/devices/:id/states/history` | Get device state history |
-| POST | `/devices/states` | Create device state |
-| GET | `/devices/states/:id` | Get device state |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/devices/:id/states/history` | GET | Get device state history |
+| `/devices/states` | POST | Create device state |
+| `/devices/states/:id` | GET | Get device state |
 
 ---
 
 ## Versions & Features
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/versions` | List all versions |
-| GET | `/versions/:id` | Get version by ID |
-| GET | `/features/version/:verid` | Get features by version |
-| POST | `/versions` | Create version |
-| POST | `/features` | Create feature |
-| PUT | `/versions/:id` | Update version |
-| PUT | `/features/:id` | Update feature |
-| DELETE | `/versions/:id` | Delete version |
-| DELETE | `/features/:id` | Delete feature |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/versions` | GET | List all versions |
+| `/versions/:id` | GET | Get version by ID |
+| `/features/version/:verid` | GET | Get features by version |
+| `/versions` | POST | Create version |
+| `/features` | POST | Create feature |
+| `/versions/:id` | PUT | Update version |
+| `/features/:id` | PUT | Update feature |
+| `/versions/:id` | DELETE | Delete version |
+| `/features/:id` | DELETE | Delete feature |
 
 ---
 
 ## Audit Logs
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/audit` | List audit logs |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/audit` | GET | List audit logs |
 
 ---
 
 ## Code Generation
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/codegen/tools` | List available tools |
-| POST | `/codegen/generate` | Generate code |
-| POST | `/codegen/build` | Build code |
-| POST | `/codegen/build-and-download` | Build and download |
-| GET | `/codegen/download/:build_id` | Download build |
-| POST | `/codegen/upload` | Upload file |
-| DELETE | `/codegen/builds/:build_id` | Cleanup build |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/codegen/tools` | GET | List available tools |
+| `/codegen/generate` | POST | Generate code |
+| `/codegen/build` | POST | Build code |
+| `/codegen/build-and-download` | POST | Build and download |
+| `/codegen/download/:build_id` | GET | Download build |
+| `/codegen/upload` | POST | Upload file |
+| `/codegen/builds/:build_id` | DELETE | Cleanup build |
 
 ---
 
 ## Export
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/export/formats` | List export formats |
-| GET | `/export/readings` | Export readings |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/export/formats` | GET | List export formats |
+| `/export/readings` | GET | Export readings |
 
 ---
 
 ## Admin
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/admin/stats` | Get admin stats |
+| Endpoint | Method | Description |
+|----------|:------:|-------------|
+| `/admin/stats` | GET | Get admin stats |
