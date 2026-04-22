@@ -1,3 +1,11 @@
+---
+title: Get User
+tags:
+  - api
+  - users
+  - get
+---
+
 # Get User
 
 > [!tip] Endpoint

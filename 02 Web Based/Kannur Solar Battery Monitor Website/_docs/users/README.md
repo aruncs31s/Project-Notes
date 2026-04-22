@@ -1,3 +1,11 @@
+---
+title: Users
+tags:
+  - api
+  - users
+  - documentation
+---
+
 # Users
 
 > User management endpoints for the SKVMS API.

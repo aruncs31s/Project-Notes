@@ -1,3 +1,11 @@
+---
+title: Create User
+tags:
+  - api
+  - users
+  - create
+---
+
 # Create User
 
 > [!tip] Endpoint

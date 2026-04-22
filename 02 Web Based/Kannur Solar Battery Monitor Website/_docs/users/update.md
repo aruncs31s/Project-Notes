@@ -1,3 +1,11 @@
+---
+title: Update User
+tags:
+  - api
+  - users
+  - update
+---
+
 # Update User
 
 > [!tip] Endpoint

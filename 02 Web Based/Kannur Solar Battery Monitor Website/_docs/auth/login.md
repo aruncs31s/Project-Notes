@@ -1,3 +1,11 @@
+---
+title: Login
+tags:
+  - api
+  - auth
+  - login
+---
+
 # Login
 
 > [!tip] Endpoint

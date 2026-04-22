@@ -1,3 +1,11 @@
+---
+title: Authentication
+tags:
+  - api
+  - authentication
+  - documentation
+---
+
 # Authentication
 
 > User authentication endpoints for the SKVMS API.

@@ -1,3 +1,11 @@
+---
+title: Refresh Token
+tags:
+  - api
+  - auth
+  - token
+---
+
 # Refresh Token
 
 > [!tip] Endpoint

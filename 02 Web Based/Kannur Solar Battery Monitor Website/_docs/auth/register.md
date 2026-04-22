@@ -1,3 +1,11 @@
+---
+title: Register
+tags:
+  - api
+  - auth
+  - register
+---
+
 # Register
 
 > [!tip] Endpoint

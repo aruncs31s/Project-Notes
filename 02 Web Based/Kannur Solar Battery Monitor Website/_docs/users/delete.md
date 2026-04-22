@@ -1,3 +1,11 @@
+---
+title: Delete User
+tags:
+  - api
+  - users
+  - delete
+---
+
 # Delete User
 
 > [!tip] Endpoint

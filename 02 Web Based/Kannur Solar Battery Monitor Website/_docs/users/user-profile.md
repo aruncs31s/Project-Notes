@@ -1,3 +1,11 @@
+---
+title: Get User Profile
+tags:
+  - api
+  - users
+  - profile
+---
+
 # Get User Profile
 
 > [!tip] Endpoint
