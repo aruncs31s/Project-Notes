@@ -47,3 +47,14 @@ The smart city website is intented to give an interface to monitor the voltage l
 
 [^1]: In earlier method the site(server) was running inside the microcontroller and the client has to access one by one.  
 
+---
+
+## 2026-05-01
+
+```ts
+ async getMicrocontrollerStats(): Promise<MicrocontrollerStats> {
+    const response = await httpClient.get<{ stats: MicrocontrollerStats }>('/devices/microcontrollers/my/stats');
+    return response.stats;
+  }
+```
+currently this fetches 
