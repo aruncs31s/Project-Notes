@@ -57,4 +57,4 @@ The smart city website is intented to give an interface to monitor the voltage l
     return response.stats;
   }
 ```
-currently this fetches 
+- [ ] currently this fetches my/stats , but for admin add `/all` or remove `my` 📅 2026-05-02 
