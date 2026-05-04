@@ -523,5 +523,53 @@ void setupWifi() {
 
 void setupSerial();
 #endif // SERIAL_H
+#include <Arduino.h>
 
+
+void setupSerial() {
+  Serial.begin(115200);
+  delay(100);
+}
+#include "wifi.h"
+#include <Arduino.h>
+#include <WebServer.h>
+#include <WiFi.h>
+#include <control.h>
+#include <relay.h>
+#include <server.h>
+#include "collection_motor.h"
+#include "config.h"
+#include "serial.h"
+
+// WiFi credentials - UPDATE THESE
+const char *ssid = "pi_wifi";
+const char *password = "12345678";
+
+
+WebServer server(PORT);
+
+CollectionMotor c(MOTOR_PIN1, PWM_PIN);
+
+
+void setup() {
+  // Initialize serial communication
+  setupSerial();
+
+  // Initialize motor control pins
+  setupPins();
+
+  // // Initialize relay
+  // setupRelay();
+  // Collection Motor Setup
+  c.setup(70); 
+
+
+  // Connect to WiFi
+  setupWifi();
+
+  // Setup web server routes
+  setupRoutes();
+}
+
+void loop() { server.handleClient(); }
 ```
