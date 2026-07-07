@@ -7,6 +7,7 @@ Welcome to the **College Education ERP** project documentation. This note serves
   - [[Backend Architecture]] - Go Clean Architecture, DDD, Dynamic Connection Pooling, and Auth/Casbin.
   - [[Frontend Architecture]] - React, Vite, Zustand, module-based page structures, and CSS.
   - [[Database Schema]] - Master vs. Tenant schema layouts, entities, and relations.
+  - [[Scalable Extension Guidelines]] - Coding guidelines for extending features using repository patterns, hooks, and shared constants.
 - **Business Modules**:
   - [[../Registration/Registration Module|Registration Module]] - Application pipeline, OCR documents, and Gale-Shapley Seat Allocation.
 
