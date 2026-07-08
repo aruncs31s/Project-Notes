@@ -6,7 +6,7 @@ tags:
   - documentation
 ---
 
-# 🔐 Authentication Module: Login Flow
+#   Authentication Module: Login Flow
 
 This document details the multi-tenant login flow of the ERP. It adheres strictly to the **Single Responsibility Principle (SRP)**, detailing the separation of concerns between HTTP requests, state orchestration, UI layouts, and database schema resolution.
 
@@ -43,7 +43,7 @@ graph TD
 
 ---
 
-## 📦 Model Definitions
+##   Model Definitions
 
 ### Frontend TypeScript Model
 Defined in `types/index.ts`:
@@ -105,7 +105,7 @@ type User struct {
 
 ---
 
-## 📡 API Call & Implementation Code
+##   API Call & Implementation Code
 
 ### Frontend Repository API Implementation
 From `shared/repositories/auth.repository.impl.ts`:
@@ -181,7 +181,7 @@ func (h *Handler) Login(c *gin.Context) {
 
 ---
 
-## 📂 Multi-Tenant Database Resolution Flow
+##   Multi-Tenant Database Resolution Flow
 
 To support multi-tenancy on localhost development, the resolver resolves databases dynamically:
 
@@ -198,7 +198,7 @@ To support multi-tenancy on localhost development, the resolver resolves databas
 
 ---
 
-## 🔗 Related Documentation
+##   Related Documentation
 
 - [[02 Registration]] — Flow for student self-registration and custom forms.
 - [[03 Schema Migration]] — How master and tenant databases are structured.
