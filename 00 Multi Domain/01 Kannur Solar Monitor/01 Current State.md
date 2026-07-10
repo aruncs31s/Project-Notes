@@ -6,4 +6,4 @@ The report is divided into x
 
 ## Hardware Side
 
-Intention: The 
+Intention: The **smart-bms** used in the 
