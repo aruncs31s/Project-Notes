@@ -1,6 +1,6 @@
 # Kannur Solar Battery Monitor Current State
 
-The report is divided into x 
+The report is divided into 2 
 1. Hardware wise 
 2. Software wise
 
@@ -32,4 +32,6 @@ This can be run inside the lan or can be hosted.
 Device Management
 1. Anyone can create device 
 2. But only one with write access to it can manage the device like turning it on or of
-3. One or meany microcontrollers can be assigned to a single 
+3. One or meany microcontrollers can be assigned to a single solar cell
+4. Admin can view and control everything
+5. One or meany devices can be assigned to a location , and assigned location and devices can be changed 
