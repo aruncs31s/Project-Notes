@@ -6,4 +6,8 @@ The report is divided into x
 
 ## Hardware Side
 
-Intention: The **smart-bms** used in the 
+Intention: Currently the device supports the following
+1. Voltage Monitoring
+2. Remote turning on and off
+
+with the help of the smar bms
