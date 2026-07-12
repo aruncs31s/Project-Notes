@@ -10,4 +10,7 @@ Intention: Currently the device supports the following
 1. Voltage Monitoring
 2. Remote turning on and off
 
-with the help of the smar bms
+with the help of the smar bms the following can be done
+1. Charging Current
+2. Charging Voltage
+3. Instantanious power 
