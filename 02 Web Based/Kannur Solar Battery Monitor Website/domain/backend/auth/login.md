@@ -60,4 +60,4 @@ Authorization: Bearer <access_token>
 ```
 
 > [!warning] Token Expiration
-> Access token expires in 24 hours. Use [Refresh Token](./refresh.md) to get a new one.
+> Access token expires in 24 hours. Use [Refresh Token](refresh.md) to get a new one.

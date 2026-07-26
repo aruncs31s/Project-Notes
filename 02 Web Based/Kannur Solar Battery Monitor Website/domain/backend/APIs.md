@@ -27,4 +27,4 @@ dg-publish: true
 ## Todo
 
 
-- [[Readings]]
+- [[02 Web Based/Kannur Solar Battery Monitor Website/domain/backend/devices/readings]]

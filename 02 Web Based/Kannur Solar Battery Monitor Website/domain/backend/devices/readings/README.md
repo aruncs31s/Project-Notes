@@ -18,7 +18,7 @@ All readings are stored and returned in **UTC timezone** (RFC3339 format). See [
 
 | Endpoint | Method | Description |
 |----------|:------:|-------------|
-| [[list]] | GET | List readings for device |
+| [[02 Web Based/Kannur Solar Battery Monitor Website/domain/backend/users/list]] | GET | List readings for device |
 | [[range]] | GET | Get readings by date range |
 | [[interval]] | GET | Get readings with interval |
 | [[progressive]] | GET | Get with running averages |
@@ -29,7 +29,7 @@ All readings are stored and returned in **UTC timezone** (RFC3339 format). See [
 | Endpoint | Method | Description |
 |----------|:------:|-------------|
 | [[advanced]] | GET | Advanced readings with filters |
-| [[create]] | POST | Create reading (device auth) |
+| [[02 Web Based/Kannur Solar Battery Monitor Website/domain/backend/devices/readings/create]] | POST | Create reading (device auth) |
 
 ## Common Types
 
@@ -38,7 +38,7 @@ All readings are stored and returned in **UTC timezone** (RFC3339 format). See [
 
 ## Quick Links (Device)
 
-- [[list|Device Readings]] - Get device readings
+- [[02 Web Based/Kannur Solar Battery Monitor Website/domain/backend/users/list|Device Readings]] - Get device readings
 - [[range|Date Range]] - Get readings by date range
 - [[interval|Interval]] - Get readings at intervals
 - [[progressive|Progressive]] - Get with running averages
@@ -47,4 +47,4 @@ All readings are stored and returned in **UTC timezone** (RFC3339 format). See [
 ## Quick Links (Global)
 
 - [[advanced|Advanced Filter]] - Filter readings globally
-- [[create|Create Reading]] - Submit new reading
+- [[02 Web Based/Kannur Solar Battery Monitor Website/domain/backend/devices/readings/create|Create Reading]] - Submit new reading

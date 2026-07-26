@@ -22,7 +22,7 @@ Learning Management System API for GCEK educational platform.
 ## Quick Links
 
 - [[tech-stack]] - Technology overview
-- [[models]] - Database models
+- [[02 Web Based/Embedded Systems LMS/backend/docs/models]] - Database models
 - [[api-endpoints]] - API documentation
 - [[jwt]] - Authentication
 - [[user-model]] - User structure

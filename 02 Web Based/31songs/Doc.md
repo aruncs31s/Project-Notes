@@ -46,7 +46,7 @@ dg-publish: true
 	- Save a “last played” snapshot (trackId, position, isPlaying, volume, deviceId)
 	- Auto-save last played when updating playback state if `X-Session-ID` is provided
 
-## [[Models]]
+## [[02 Web Based/Embedded Systems LMS/backend/docs/models]]
 - Track: `id`, `title`, `artist`, `album`, `duration`, `genre`, `year?`, `track?`, `filePath`, `fileName`, `hasAlbumArt`, `albumArtKey?`
 - Album: `album`, `artist`, `trackCount`, `year?`, `tracks[]`, `hasAlbumArt`, `albumArtKey?`
 - Artist: `name`, `trackCount`, `albums[]`
