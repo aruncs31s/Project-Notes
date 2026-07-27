@@ -72,7 +72,7 @@ LOG_FORMAT=json go run . 2>&1 | jq .
 ---
 
 > [!summary] Change Summary
-> _Fill in after implementation._
+> Implemented structured logging with log/slog. Replaced log calls in main.go and added job_id logging in export.go process and ConsumeSequentially.
 
 **Tags:** 
 **Commit:** 

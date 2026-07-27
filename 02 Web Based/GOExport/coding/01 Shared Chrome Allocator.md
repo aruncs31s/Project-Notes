@@ -74,7 +74,7 @@ func NewChromeRenderer() (render func(context.Context, string) ([]byte, error), 
 ---
 
 > [!summary] Change Summary
-> _Fill in after implementation._
+> Implemented Shared Chrome Allocator in engines/chromedp.go using chromedp.NewExecAllocator. Removed renderPDF from export.go and passed renderer into NewExportService in main.go.
 
 **Tags:** 
 **Commit:** 
