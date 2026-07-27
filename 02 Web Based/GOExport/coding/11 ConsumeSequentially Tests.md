@@ -73,7 +73,7 @@ These notes **are** the test plan.
 ---
 
 > [!summary] Change Summary
-> _Fill in after implementation._
+> Added `fakeAcknowledger` (implements `amqp091.Acknowledger`), `fakeConsumer` (implements `jobConsumer`), and `makeDelivery` helper to `export_test.go`. Four tests: `_AcksOnSuccess`, `_NacksOnRenderFailure`, `_RejectsBadJSON`, `_RespectsContextCancel`. All pass.
 
 **Tags:** 
 **Commit:** 

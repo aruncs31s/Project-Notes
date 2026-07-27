@@ -71,7 +71,7 @@ GET /exports/:id/pdf
 ---
 
 > [!summary] Change Summary
-> _Fill in after implementation._
+> `ObjectStore` interface extended with `PresignURL(ctx, key, ttl) (string, error)`. `s3Store` uses `s3.NewPresignClient`. `s3Store.localDev` flag (set when `S3_ENDPOINT` is non-empty) returns empty string — caller falls back to byte streaming. `GET /exports/:id/pdf` now does a 302 redirect in production or streams bytes in dev. `PRESIGN_TTL` (default 15m) added to config.
 
 **Tags:** 
 **Commit:** 

@@ -75,7 +75,7 @@ func (s *exportService) StartCleanup(ctx context.Context, ttl time.Duration)
 ---
 
 > [!summary] Change Summary
-> _Fill in after implementation._
+> `StatusStore` interface includes `DeleteBefore(ctx, cutoff) (int64, error)`. `StartCleanup(ctx, ttl)` added to `exportService` — launches a goroutine with `ttl/4` ticker. Added `STATUS_TTL` (default 24h) to config. Cleanup goroutine launched from `cmd/main.go` after service creation.
 
 **Tags:** 
 **Commit:** 

@@ -83,7 +83,7 @@ Callback payload (POSTed to `callback_url` on completion):
 ---
 
 > [!summary] Change Summary
-> _Fill in after implementation._
+> Added `CallbackURL` field to `exportJob` and `exportStatus` structs. Accepted and validated in `POST /exports` handler. `fireCallback()` function POSTs the final status JSON to the callback URL with a 10s timeout and one retry after 5s. Called from `process()` and `setFailure()` in goroutines.
 
 **Tags:** 
 **Commit:** 

@@ -74,7 +74,7 @@ Error cases:
 ---
 
 > [!summary] Change Summary
-> _Fill in after implementation._
+> Added `limit` and `offset` query params to `GET /exports`. `parsePagination()` helper validates: limit 1–200 (default 50), offset ≥0 (default 0). `listStatuses` now returns `(items, total, error)`. `StatusStore.List` accepts `limit, offset` and `StatusStore.Count` returns the total for the envelope. Response includes `count`, `total`, `limit`, `offset`.
 
 **Tags:** 
 **Commit:** 

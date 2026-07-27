@@ -74,8 +74,8 @@ func NewChromeRenderer() (render func(context.Context, string) ([]byte, error), 
 ---
 
 > [!summary] Change Summary
-> Implemented Shared Chrome Allocator in engines/chromedp.go using chromedp.NewExecAllocator. Removed renderPDF from export.go and passed renderer into NewExportService in main.go.
+> Created `engines/chromedp.go` with `NewChromeRenderer()` — starts a single persistent `ExecAllocator` (Chrome process) at startup. Each render call opens a new tab (child context) rather than a new process. Removed `renderPDF` from `export.go`. Updated `cmd/main.go` to call `engines.NewChromeRenderer()` and defer the cancel. `NewExportService` now accepts the renderer as a parameter instead of hardcoding it.
 
 **Tags:** 
 **Commit:** 
-**PR / Branch:** 
+**PR / Branch:**

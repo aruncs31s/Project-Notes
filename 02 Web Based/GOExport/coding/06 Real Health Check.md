@@ -70,7 +70,7 @@ S3 ping: `HeadBucket` with 3s timeout.
 ---
 
 > [!summary] Change Summary
-> _Fill in after implementation._
+> Added `GET /readyz` to `http.go`. `ObjectStore` interface extended with `Ping(ctx) error` implemented via `HeadBucket` in `s3Store`. `broker.Ping()` checks `conn.IsClosed()`. Both probes run concurrently via goroutines with a 3-second timeout. Response: `{status, broker, storage}` JSON; 200 if all ok, 503 if any fails.
 
 **Tags:** 
 **Commit:** 

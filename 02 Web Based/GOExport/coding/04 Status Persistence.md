@@ -87,7 +87,7 @@ CREATE INDEX IF NOT EXISTS idx_created_at ON export_statuses(created_at DESC);
 ---
 
 > [!summary] Change Summary
-> _Fill in after implementation._
+> Defined `StatusStore` interface in `status_store.go`. Created `store_mem.go` (in-memory, for tests) and `store_sqlite.go` (production, `modernc.org/sqlite`). SQLite uses WAL mode, upsert-on-conflict, and indexes on `section` and `created_at`. `export.go` refactored to use `StatusStore` — removed `sync.RWMutex` map. `NewSQLiteStore` opens/creates the DB at `SQLITE_PATH`. All tests updated to use `newMemStore()`.
 
 **Tags:** 
 **Commit:** 

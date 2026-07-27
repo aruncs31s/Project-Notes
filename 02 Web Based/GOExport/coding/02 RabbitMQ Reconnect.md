@@ -66,7 +66,7 @@ func (b *broker) reconnect(ctx context.Context) error
 ---
 
 > [!summary] Change Summary
-> _Fill in after implementation._
+> Implemented exponential-backoff reconnect loop inside `ConsumeSequentially` in `export.go`. The delivery loop is split into `consumeLoop` (runs while connected) and an outer loop that re-calls `deliveries()` on channel close. Backoff: 1s → doubles → capped at 30s. `broker.Ping()` added for the readiness probe.
 
 **Tags:** 
 **Commit:** 

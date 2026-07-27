@@ -74,7 +74,7 @@ curl http://localhost:8080/metrics | grep goexport
 ---
 
 > [!summary] Change Summary
-> _Fill in after implementation._
+> Created `metrics/metrics.go` package with 5 metrics: `JobsSubmitted`, `JobsCompleted`, `JobsFailed` (counters), `RenderDuration`, `UploadDuration` (histograms). All labeled by `section`. Instrumented `export.go process()` with render/upload timings and job counts. Added `/metrics` route via `promhttp.Handler()`. Metrics package imported as side-effect in `cmd/main.go`.
 
 **Tags:** 
 **Commit:** 

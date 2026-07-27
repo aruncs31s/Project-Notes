@@ -87,7 +87,7 @@ curl -X POST http://localhost:8080/exports -H 'Content-Type: application/json' -
 ---
 
 > [!summary] Change Summary
-> _Fill in after implementation._
+> Created `docker-compose.yml` (RabbitMQ 4 management + LocalStack S3), `scripts/init-localstack.sh` (creates `goexport-dev` bucket), `.env.docker` (pre-filled for compose), and multi-stage `Dockerfile` (Go build stage + Alpine runtime with Chromium). Updated `README.md` with Docker Compose quick-start, env var table, and API endpoint list.
 
 **Tags:** 
 **Commit:** 
