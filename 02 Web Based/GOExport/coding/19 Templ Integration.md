@@ -1,8 +1,15 @@
+---
+tags:
+  - templ
+Status:
+tested:
+---
+
 # 19 Templ Integration
 
 > [!summary] Change Summary
 > **Feature**: Server-side rendering (SSR) of the admin website using Go `github.com/a-h/templ`.
-> **Status**: ✅ Implemented — verification tests pass
+> **Status**: ✅ Implemented — verification tests pass. Upgraded sidebar and overview page stat cards to use modern inline SVG icons (with animated spin transitions for processing gear).
 > Tags:
 > Commit:
 
