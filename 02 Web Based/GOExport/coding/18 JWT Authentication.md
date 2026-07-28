@@ -2,7 +2,7 @@
 
 > [!summary] Change Summary
 > **Feature**: JWT-based API client authentication using `ACCESS_TOKEN_SECRET`. Admin dashboard supports custom token generation (app name and duration parameters).
-> **Status**: Implementation in progress
+> **Status**: ✅ Implemented — verification tests pass
 > Tags:
 > Commit:
 
