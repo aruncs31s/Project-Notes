@@ -15,7 +15,7 @@ type: api-doc
 ## Installation
 
 ```bash
-go get github.com/aruncs31s/goexport/client
+go get github.com/aruncs31s/goexport/pkg/client
 ```
 
 ## Quick Start
@@ -30,7 +30,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/aruncs31s/goexport/client"
+	"github.com/aruncs31s/goexport/pkg/client"
 )
 
 func main() {
