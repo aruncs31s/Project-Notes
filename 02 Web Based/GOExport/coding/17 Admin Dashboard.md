@@ -2,7 +2,8 @@
 
 > [!summary] Change Summary
 > **Feature**: Standalone admin dashboard binary (`cmd/admin`) with an embedded dark-mode SPA for managing exports, tokens, and cleanup.
-> **Status**: Implementation in progress
+> **Status**: ✅ Implemented — `go build ./...` and `go vet ./...` pass
+> **Files created/modified**: `cmd/admin/main.go`, `cmd/admin/spa.go`, `internal/config/initializers.go`, `internal/services/storage/status_store.go`, `internal/services/storage/store_sqlite.go`, `internal/services/storage/store_mem.go`, `Dockerfile`, `docker-compose.yml`
 > Tags:
 > Commit:
 
