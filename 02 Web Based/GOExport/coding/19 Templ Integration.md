@@ -4,6 +4,8 @@ tags:
 Status:
 tested:
 ---
+![[19 Templ Integration.png]]
+
 
 # 19 Templ Integration
 
