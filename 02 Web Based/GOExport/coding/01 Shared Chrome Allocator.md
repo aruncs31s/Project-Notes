@@ -75,7 +75,8 @@ func NewChromeRenderer() (render func(context.Context, string) ([]byte, error), 
 
 > [!summary] Change Summary
 > Created `engines/chromedp.go` with `NewChromeRenderer()` — starts a single persistent `ExecAllocator` (Chrome process) at startup. Each render call opens a new tab (child context) rather than a new process. Removed `renderPDF` from `export.go`. Updated `cmd/main.go` to call `engines.NewChromeRenderer()` and defer the cancel. `NewExportService` now accepts the renderer as a parameter instead of hardcoding it.
+> **Update (2026-08-05):** Added `chromedp.Env` variable overrides pointing `XDG_CONFIG_HOME`, `XDG_CACHE_HOME`, and `XDG_DATA_HOME` to the temporary data directory, preventing `chrome_crashpad_handler` from crashing due to permission issues when starting Chrome inside restricted environments like Render.
 
-**Tags:** 
+**Tags:** #chromedp #crashpad #render
 **Commit:** 
 **PR / Branch:**
