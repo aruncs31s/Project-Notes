@@ -647,6 +647,6 @@ Designed for extension and customization.
 
 ---
 
-For detailed usage instructions, see the [README.md](README.md) file.
+For detailed usage instructions, see the [README.md](98%20Private/README.md) file.
 
 For dashboard-specific documentation, see the [DASHBOARD.md](DASHBOARD.md) file.

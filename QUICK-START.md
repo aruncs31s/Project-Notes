@@ -287,7 +287,7 @@ open "New Project/New Project.md"
 
 For detailed information, see:
 
-- **[README.md](README.md)** - Repository overview
+- **[README.md](01%20Projects/README.md)** - Repository overview
 - **[STRUCTURE.md](STRUCTURE.md)** - Detailed structure guidelines
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - How to contribute
 - **[templates/](templates/)** - Project templates

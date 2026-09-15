@@ -678,6 +678,6 @@ Tested and supported on:
 
 ---
 
-For API documentation and integration guide, see [README.md](README.md).
+For API documentation and integration guide, see [README.md](98%20Private/README.md).
 
 For comprehensive feature list, see [FEATURES.md](FEATURES.md).

@@ -9,18 +9,30 @@ dg-publish: true
 ---
 # Smart City Website
 
+Requirement:
+The voltage reading is between 10.5 V to 14.5 Volts
+- During 9 AM to 6 PM they charge from 12.4 and stops charging at 13.5 , then discharges to 
+- Discharge happens at same rate after 6PM and 
+-  Charging is slow when time is 7 pm it starts charging at 7 AM but very slowly and it becomes fast when time is 9 AM
+The senario is to simulate a battery voltage reading of a solar cell, 
+i tried to make this using ai but in my last attempt the ui is only showing readings from morning 5:30 to Evening 5:30 so all the readings other that that get missed 
+```dataview
+TABLE dg-publish as  Public , status as Status
+ from #kannur_solar_battery_monitor_website 
+```
+
+
 ## Tasks 
 
 ```tasks
 not done 
-path includes website
+path includes 02 Web Based/Kannur Solar Battery Monitor Website
 LIMIT 10
 ```
 
 1. [x] Can it plot graphs ✅ 2025-05-04
 2. [x] Can my website scraper can be integrated with this? ✅ 2025-05-04
 3. [x] How re' going to store the data? ✅ 2025-05-04
-
 
 
 ## Def
@@ -35,3 +47,22 @@ The smart city website is intented to give an interface to monitor the voltage l
 
 [^1]: In earlier method the site(server) was running inside the microcontroller and the client has to access one by one.  
 
+---
+
+## 2026-05-01
+
+```ts
+ async getMicrocontrollerStats(): Promise<MicrocontrollerStats> {
+    const response = await httpClient.get<{ stats: MicrocontrollerStats }>('/devices/microcontrollers/my/stats');
+    return response.stats;
+  }
+```
+- [ ] currently this fetches my/stats , but for admin add `/all` or remove `my` 📅 2026-05-02 
+
+
+## 2026-05-09
+
+![[Smart City WebSite.png]]
+
+
+![[Smart City WebSite-1.png]]
