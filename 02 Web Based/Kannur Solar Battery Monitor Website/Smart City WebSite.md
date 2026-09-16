@@ -66,3 +66,17 @@ The smart city website is intented to give an interface to monitor the voltage l
 
 
 ![[Smart City WebSite-1.png]]
+
+---
+
+## 2026-09-16: Device Management Modernization
+
+Comprehensive modernization of device ownership, configuration workflow, hierarchical topology, and ingestion auto-activation:
+- **Changelog & Architecture Details**: [[domain/backend/devices/Device Management Modernization - Changelog|Device Management Modernization - Changelog]]
+- **Completed**:
+  1. Backend ownership & query scoping reconciliation (ANSI fallback to `device_ownerships` table with `created_by` backfill).
+  2. Unified Device API (`PUT /api/devices/:id` with preloaded assignments and configuration state).
+  3. Frontend multi-step Device Provisioning Wizard (`DeviceProvisioningWizard.tsx`) unifying device creation across all hardware types.
+  4. Ingestion pipeline lifecycle state auto-activation (transits state from Initialized/Inactive to Active upon first telemetry packet).
+- **In Progress**:
+  5. Frontend Unified Device Inventory Hub with hardware category filters and parent-child hierarchy topology tree view.
