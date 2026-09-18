@@ -80,6 +80,7 @@ Android Music Sync/
 ├── syncer.py                   # Forward sync workflow (Local -> ADB)
 ├── reverse_syncer.py           # Reverse sync workflow (ADB -> Local)
 ├── hide_list_db.py             # SQLite interface for persistent hide-list database
+├── audio_fingerprint.py        # Chromaprint fpcalc acoustic fingerprinting engine
 ├── audio_metadata.py           # ID3/FLAC audio metadata extraction using Mutagen
 ├── song_parser.py              # Parser for ADB shell content query output
 ├── fuzzy_matcher.py            # Fuzzy string matching and ranking algorithms
@@ -152,20 +153,34 @@ Android Music Sync/
 - **Interactive Ranger TUI**: Provides a side-by-side terminal UI allowing manual file toggling, instant hide key (`h`), and bulk sync confirmation.
 
 ### 5. Duplicate Detection & Library Cleaning
-- **Cluster Matching**: Scans all local audio files and groups them into duplicate clusters by:
-  1. Normalized `Artist - Title` ID3 metadata comparison.
-  2. Normalized filename comparison.
-- **Safe Deletion**: Deletes duplicate files from filesystem while updating SQLite hide lists and clearing metadata caches.
+The library maintenance engine features a multi-tiered duplicate detection and resolution system:
+- **Acoustic Waveform Fingerprinting**: Uses Chromaprint's `fpcalc` utility to generate perceptual acoustic hashes, clustering identical audio tracks across different codecs (`.flac`, `.mp3`, `.m4a`), bitrates, tags, or filenames.
+- **Persistent SQLite Caching**: Caches fingerprints and duration in `audio_fingerprints` table with `file_size` and `file_mtime` invalidation checks for sub-second repeat scans.
+- **Multi-Phase Fallback Pipeline**: 
+  1. *Phase 1*: Acoustic waveform clustering (`audio_fingerprint`).
+  2. *Phase 2*: Normalized metadata tag matching (`Artist - Title`).
+  3. *Phase 3*: Normalized filename matching (`filename`).
+- **Real-Time SSE Streaming**: Live per-song scanning logs streamed over `GET /api/duplicates/stream`.
+- **Safe Deletion & Auto-Select**: "Keep Best" quality heuristic to preserve high-bitrate copies and safely move redundant tracks to trash.
+
+> [!TIP]
+> Comprehensive documentation for audio fingerprinting is available in the dedicated modular note series:
+> - **[[Audio Fingerprinting]]** (Hub / Map of Content)
+> - **[[Chromaprint & fpcalc Integration]]**
+> - **[[Fingerprint Cache & Database Schema]]**
+> - **[[Multi-Phase Duplicate Detection Engine]]**
+> - **[[Web UI & Real-Time SSE Streaming]]**
 
 ---
 
 ## Setup & Installation
 
 ### Prerequisites
-- Operating System: Linux (Ubuntu, Debian, Fedora, Arch, Manjaro)
+- Operating System: Linux (Ubuntu, Debian, Fedora, Arch, Manjaro) or macOS
 - Python 3.8 or higher
 - Android Platform Tools (`adb`)
-- Redis Server (Optional, for caching song query results)
+- Chromaprint CLI (`fpcalc` / `libchromaprint-tools`) - Required for acoustic audio fingerprinting
+- Redis Server (Optional, for caching song query results and duplicate clusters)
 
 ### Installation Steps
 
@@ -261,6 +276,12 @@ python app.py -dl "https://open.spotify.com/track/..."
 ---
 
 ## Related Documents & Links
+- **Audio Fingerprinting Suite**:
+  - Main Hub / MOC: **[[Audio Fingerprinting]]**
+  - Binary & Wrapper: **[[Chromaprint & fpcalc Integration]]**
+  - Database & Caching: **[[Fingerprint Cache & Database Schema]]**
+  - Deduplication Cascade: **[[Multi-Phase Duplicate Detection Engine]]**
+  - Web UI & SSE: **[[Web UI & Real-Time SSE Streaming]]**
 - Workspace Path: `/home/aruncs/Devices/lenovo`
 - CLI Entry Point: [app.py](file:///home/aruncs/Devices/lenovo/app.py)
 - Web Server API: [server.py](file:///home/aruncs/Devices/lenovo/ui/server.py)
